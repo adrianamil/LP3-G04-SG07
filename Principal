@@ -16,5 +16,23 @@ public class Principal {
             system.out.println("Adivinaste!!!!! , ganaste un premio");
         else
             system.out.println("ups, perdiste.....");
+        String Resultado = elegir(vida);
+        System.out.print("Tu regalo es: "+Resultado);
+    }
+
+    public static String elegir(int vida) {
+        string gift = "";
+        switch (vida) {
+            case 1:
+                gift = "Un pasaje al caribe";
+                break;
+            case 2:
+                gift = "Una visita al museo mas cercano a tu casa";
+                break;
+            case 3:
+                gift = "Una entrada al cine";
+                break;
+        }
+        return gift;
     }
 }
