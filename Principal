@@ -1,0 +1,38 @@
+import java.util.scanner
+public class Principal {
+    public static void main(String[] args) {
+        int vida, rp;
+        boolean fl= false;
+        vida = 0;
+        scaner sc new Scanner(System.in);
+        do {
+            vida ++;
+            systen.out.printin("Vida:"+ vida + "\T¿Cual es el numero secreto?");
+            rp = sc.nextint();
+            if (rp == 1234)
+                fl = true;          
+        }while(vida < 3 && !fl );
+        if (fl == true)
+            system.out.println("Adivinaste!!!!! , ganaste un premio");
+        else
+            system.out.println("ups, perdiste.....");
+        String Resultado = elegir(vida);
+        System.out.print("Tu regalo es: "+Resultado);
+    }
+
+    public static String elegir(int vida) {
+        string gift = "";
+        switch (vida) {
+            case 1:
+                gift = "Un pasaje al caribe";
+                break;
+            case 2:
+                gift = "Una visita al museo mas cercano a tu casa";
+                break;
+            case 3:
+                gift = "Una entrada al cine";
+                break;
+        }
+        return gift;
+    }
+}
