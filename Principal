@@ -16,4 +16,5 @@ public class Principal {
             system.out.println("Adivinaste!!!!! ");
         else
             system.out.println("ups, perdiste.....");
-
+    }
+}
