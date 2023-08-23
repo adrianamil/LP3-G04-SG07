@@ -6,10 +6,6 @@ package principal4;
 
  
 
-/**
-*
-* @author Natty Laureano
-*/
 public class Diagnóstico {
     public void aptoVacunaA(Perro p1) {
         double temp = p1.getTemp();
