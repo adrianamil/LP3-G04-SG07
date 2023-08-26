@@ -1,0 +1,50 @@
+package ejercicio.pkg2;
+import java.util.Scanner;
+/**
+ *
+ * @author Ana Paula
+ */
+public class EJERCICIO2 {
+
+    public static void main(String[] args) {
+        DatosPaciente pm1 = new DatosPaciente(null, null, null,
+                0, 0, 0, 0, 0);
+
+        try (Scanner scannerA = new Scanner(System.in)) {
+            System.out.println("Datos del Paciente");
+            System.out.println("Ingresar nombres: ");
+            String nombre = scannerA.nextLine();
+            System.out.println("Ingrar apellidos: ");
+            String apellido = scannerA.nextLine();
+            System.out.println("Ingrar genero: ");
+            String genero = scannerA.nextLine();
+            System.out.println("Ingresar altura en metros(colocar coma): ");
+            double altura = scannerA.nextDouble();
+            System.out.println("Ingresar peso en Kg(colocar coma): ");
+            double peso = scannerA.nextDouble();
+            System.out.println("Datos de nacimiento");
+            System.out.println("Ingrese dia(en numeros): ");
+            int dia = scannerA.nextInt();
+            System.out.println("Ingrese mes(en numeros): ");
+            int mes = scannerA.nextInt();
+            System.out.println("Ingrese anioo: ");
+            int anio = scannerA.nextInt();
+
+            pm1.setNombre(nombre);
+            pm1.setApellido(apellido);
+            pm1.setGenero(genero);
+            pm1.setAltura(altura);
+            pm1.setPeso(peso);
+            pm1.setDiaNacimiento(dia);
+            pm1.setMesNacimiento(mes);
+            pm1.setAnioNacimiento(anio);
+
+            System.out.println("Datos del paciente: " + pm1);
+
+            pm1.calcularEdad();
+            System.out.println("Edad del paciente: " + pm1.getAnioNacimiento() + " anios");
+            pm1.calcularFrecuenciaCardiacaMax(anio);
+            pm1.calcularIMC(peso);
+        }
+    }
+}
