@@ -1,0 +1,121 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package ejercicio.pkg2;
+
+/**
+ *
+ * @author Ana Paula
+ */
+
+public class DatosPaciente {
+    private String nombre;
+    private String apellido;
+    private String genero;
+    private int diaNacimiento;
+    private int mesNacimiento;
+    private int anioNacimiento;
+    private double altura;
+    private double peso;
+
+    public DatosPaciente(String nombre, String apellido,
+            String genero, double altura, double peso, int anioNacimiento,
+            int mesNacimiento, int diaNacimiento) {
+        this.altura = altura;
+        this.apellido = apellido;
+        this.anioNacimiento = anioNacimiento;
+        this.mesNacimiento = mesNacimiento;
+        this.diaNacimiento = diaNacimiento;
+        this.peso = peso;
+        this.nombre = nombre;
+        this.genero = genero;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public int getDiaNacimiento() {
+        return diaNacimiento;
+    }
+
+    public void setDiaNacimiento(int diaNacimiento) {
+        this.diaNacimiento = diaNacimiento;
+    }
+
+    public int getMesNacimiento() {
+        return mesNacimiento;
+    }
+
+    public void setMesNacimiento(int mesNacimiento) {
+        this.mesNacimiento = mesNacimiento;
+    }
+
+    public int getAnioNacimiento() {
+        return anioNacimiento;
+    }
+
+    public void setAnioNacimiento(int anioNacimiento) {
+        this.anioNacimiento = anioNacimiento;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
+    @Override
+    public String toString() {
+        return "Datos del Paciente [Nombre: " + nombre + ", Apellido: " + apellido +
+                ", Género: " + genero + ", Fecha de nacimiento: " + diaNacimiento + "/" + mesNacimiento + "/" + anioNacimiento +
+                ", Altura: " + altura + "m" + ", Peso: " + peso + "kg " + "]";
+    }
+
+    public void calcularEdad() {
+        this.anioNacimiento = 2023 - this.anioNacimiento;
+    }
+
+    public void calcularFrecuenciaCardiacaMax(double m1) {
+        m1 = 208 - 0.7 * this.getAnioNacimiento();
+        System.out.println("La frecuencia cardiaca es: " + m1);
+    }
+
+    public void calcularIMC(double m2) {
+        m2 = this.getPeso() / this.getAltura();
+        System.out.println("Indice de masa corporal: " + m2);
+    }
+
+}
+
