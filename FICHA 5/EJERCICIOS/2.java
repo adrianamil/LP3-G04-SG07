@@ -105,22 +105,12 @@ public class Motor {
 }
 public class TestAgregacion {
     public static void main(String[] args) {
-        // Crear un motor
         Motor motor = new Motor(3728, 1000);
-
-        // Crear un automóvil con motor
         Automovil automovilConMotor = new Automovil("VH742", 5, "Nissan", "Versa", motor);
-
-        // Crear un automóvil sin motor
         Automovil automovilSinMotor = new Automovil("AU398", 3, "Toyota", "Corolla", null);
-
-        // Mostrar información del automóvil con motor
         System.out.println("Informacion del Automovil con Motor:");
         System.out.println(automovilConMotor.toString());
-
         System.out.println("\n-----------------------------------\n");
-
-        // Mostrar información del automóvil sin motor
         System.out.println("Informacion del Automovil sin Motor:");
         System.out.println(automovilSinMotor.toString());
     }
